@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/notosansthaana.css);
+        * {
+            font-family: 'Noto Sans Kannada', sans-serif;
+            box-sizing: border-box;
+        }
+        
+        body,h1,h2,h3,h4,h5,h6,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        /*        圖片*/
+        
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        /*        浮動修復*/
+        
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        /*        滿版*/
+        
+        .full-width {
+            width: 100%;
+        }
+        /*        固定寬度*/
+        
+        .fixed-width {
+            width: 1200px;
+            margin: auto
+        }
+        /*        3欄*/
+        
+        .col-3 {
+            float: left;
+            width: 380px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        /*        4欄*/
+        
+        .col-4 {
+            float: left;
+            width: 280px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    
+    nav .logo {
+        float: left;
+        width: 100px;
+        height: 100px;
+        background-color: #000000;
+    }
+    nav .menu {
+        float: right;
+    }
+    nav .menu ul {
+        margin: 0;
+        padding: 0;
+    }
+    nav .menu li {
+        float: left;
+        list-style-type: none;
+    }
+    nav .menu a {
+        display: block;
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 100px;
+        line-height: 100px;
+        color: #000000;
+        font-size: 14px;
+        text-decoration: none;
+    }
+    header {
+        background-image: url(http://www.designcouncil.org.uk/sites/default/files/styles/dc_share_image/public/assets/images/DesignEconomy_banner%203.jpg?itok=B9XhMddM);
+        background-size: cover;
+        height: 600px;
+        /*            padding-top: 250px;*/
+        /*            padding-bottom: 250px;*/
+        
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 0;
+    }
+    header::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+    header .content {
+        font-size: 16px;
+        display: inline-block;
+        vertical-align: middle;
+        color: #ffffff;
+        line-height: 1.3;
+        letter-spacing: 1px;
+    }
+    header a {
+        color: aliceblue;
+        text-decoration: none;
+    }
+    #about {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    #about .col-3 {
+        text-align: center;
+        padding: 20px;
+    }
+    #about h3 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    #about p {
+        font-size: 13px;
+        text-align: justify;
+    
+    }
+    #about .col-3 .icon {
+        color: red;
+    }
+        
+    #ad {
+        background-color: red;
+        background-position: center;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        text-align:center;
+        color: #fff;
+        
+    }
+    #ad p{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 13px;                  
+    }
+    #profile{
+        padding-top: 100px;
+        padding-bottom: 100px;
+            
+    }
+    #profile div:nth-of-type(1){
+        text-align: center;
+    }
+    #profile .detail{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 0;
+		width: 100%;
+    }
+    #profile .detail::before{
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;            
+    }
+    #profile .thumb{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 16px;
+        width: 80px;
+    }
+    #profile .position{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 16px;
+        width: 300px;
+        text-align:left;            
+    }
+    #profile .position p{
+        font-size: 13px;            
+    }
+    #profile div:nth-of-type(2) .col-3>p{
+        padding: 20px 20px 40px 15px;
+        text-align: left;
+        font-size: 13px;    
+    }
+    #blog{
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-color:#e5e5e5;
+            
+    }
+    #blog .gallery{
+        position: relative;
+    }
+    #blog .gallery .date{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+        background-color: #000000;
+        color: #ffffff;
+        top:0;
+        left: 20px;
+        text-align: center;
+        font-size: 12px;
+        
+    }
+        .title{
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 50px;        
+        }
+        .title h2{
+            color: black;
+        }
+        #blog .gallery p{
+            color: #626262;
+            font-size: 13px;
+            margin-top: 13px;            
+        }
+        footer .logo{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            float: left;
+        }
+        footer .copyright{
+            line-height: 100px;
+            float: left;
+            font-size: 12px;
+            margin-left: 30px;
+        }
+        footer .menu{
+            float: right;
+        }
+        footer .menu a{
+            line-height: 100px;
+            text-decoration: none;
+            color: #000000;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="fixed-width">
+        <div class="logo"></div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Journal</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="full-width">
+        <div class="content"><br><br><br><br><br><br><br><br>
+            <h1>DESIGN</h1>
+            <p>The Design Economy</p> <a href="#">—</a> </div>
+    </header>
+    <div id="about" class="full-width clearfix">
+        <div class="fixed-width">
+            <div class="col-3">
+                <div class="icon"><span class="fa fa-american-sign-language-interpreting  fa-3x"></span></div>
+                <h3>ABOUT</h3>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quibusdam ab temporibus, magni, quam nemo nam. </p>
+            </div>
+            <div class="col-3">
+                <div class="icon"><span class="fa fa-share-alt-square fa-3x"></span></div>
+                <h3>SHARE</h3>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quibusdam ab temporibus, magni, quam nemo nam. </p>
+            </div>
+            <div class="col-3">
+                <div class="icon"><span class="fa fa-cubes fa-3x"></span></div>
+                <h3>NEWS</h3>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quibusdam ab temporibus, magni, quam nemo nam. </p>
+            </div>
+        </div>
+    </div>
+    <div id="ad" class="full-width">
+        <h2>MOVIE</h2>
+        <p>Lorem ipsum dolor sit consectetur adipisicing elit.</p>
+        <span class="fa fa-play-circle fa-3x"></span>
+    </div>
+    <div id="profile" class="full-width clearfix">
+        <div class="fixed-width title">
+           <h2>PROFIL</h2>
+           <p> Lorem ipsum dolor sit amet</p>
+           </div>
+           <div class="fixed-width clearfix">
+            <div class="col-3">
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deserunt doloribus laudantium repudiandae minima a temporibus velit.
+               </p>        
+                <div class="detail">
+                    <div class="thumb"><span class="fa fa-user-circle fa-3x"></span></div>
+                    <div class="position">
+                        <h3>CEO</h3>
+                        <p>John Doe</p>
+                    </div>        
+                </div>   
+            </div>
+              <div class="col-3">
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deserunt doloribus laudantium repudiandae minima a temporibus velit.
+               </p>        
+                <div class="detail">
+                    <div class="thumb"><span class="fa fa-user-circle fa-3x"></span></div>
+                    <div class="position">
+                        <h3>CEO</h3>
+                        <p>John Doe</p>
+                    </div>        
+                </div>   
+            </div>
+              <div class="col-3">
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deserunt doloribus laudantium repudiandae minima a temporibus velit.
+               </p>        
+                <div class="detail">
+                    <div class="thumb"><span class="fa fa-user-circle fa-3x"></span></div>
+                    <div class="position">
+                        <h3>CEO</h3>
+                        <p>John Doe</p>
+                    </div>        
+                </div>   
+            </div>   
+        </div>
+    </div>
+    <div id="blog" class="full-width clearfix">
+        <div class="fixed-width title">
+            <h2>RECENT POSTS</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="fixed-width">
+            <div class="col-4">
+                <div class="gallery">
+                    <div class="date">01 JAN</div>
+                    <img src="img/bloom-brand-design.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div> 
+               <div class="col-4">
+                <div class="gallery">
+                    <div class="date">02 FAB</div>
+                    <img src="img/foundr-web-design-4.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div> 
+               <div class="col-4">
+                <div class="gallery">
+                    <div class="date">03 MAR</div>
+                    <img src="img/kinesiology-1st-web-design-mockup.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div> 
+               <div class="col-4">
+                <div class="gallery">
+                    <div class="date">04 APR</div>
+                    <img src="img/rc-brand-design-mockup.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="full-width">
+        <div class="fixed-width">
+            <div class="logo"></div>
+            <div class="copyright">
+                &copy; LCC Design All Rights Reserved - 2016
+            </div>
+            <div class="menu">
+                <a href="#">About Us</a>
+                <a href="#">Products</a>
+                <a href="#">Journal</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>   
+</body>
+</html>
